@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import Layout from "../components/Layout";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "../lib/axios";
 
 const inter = Inter({ subsets: ["latin"] });
