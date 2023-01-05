@@ -8,15 +8,6 @@ import axios from "../lib/axios";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [data, setData] = useState(null);
-  const getData = async () => {
-    await axios.get("/campaigns").then((response) => {
-      setData(response.data.data);
-    });
-  };
-  useEffect(() => {
-    getData();
-  }, []);
   return (
     <>
       <Head>
@@ -27,7 +18,6 @@ export default function Home() {
       </Head>
 
       <p className="text-2xl text-red-500">index</p>
-      <p>{JSON.stringify(data)}</p>
     </>
   );
 }
