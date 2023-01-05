@@ -14,7 +14,9 @@ export default function Home() {
       setData(response.data.data);
     });
   };
-  useEffect(() => {});
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <>
       <Head>
